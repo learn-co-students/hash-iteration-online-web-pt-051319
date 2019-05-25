@@ -1,6 +1,7 @@
 require_relative "../lib/cruise_ship.rb"
 
 
+
 describe "#select_winner" do
   it "returns the name of the passenger who stays in suite a and whose name begins with the letter 'A'" do 
 
@@ -12,6 +13,12 @@ describe "#select_winner" do
       suite_e: "Crumpet the Elf"
       }
 
-    expect(select_winner(passengers)).to eq("Amanda Presley")
+    expect(select_winner(passengers)).to eq
+    
+winner = ""
+passengers.each do |Suite, name
+if suite == :suite_a &&
+  name.start_with? ("A")
+  winner = name
   end
 end
